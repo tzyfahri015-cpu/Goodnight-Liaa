@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Night Liaa</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    height: 100vh;
+    background: linear-gradient(#020111, #191621, #20202c, #515175);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/YKY28eT.png');
+    animation: animStar 150s linear infinite;
+  }
+  @keyframes animStar {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+  }
+  .box {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    animation: fadeIn 3s ease-in-out;
+  }
+  h1 {
+    font-size: 2.8rem;
+    color: #ffb3de;
+    text-shadow: 0 0 10px #ff66aa, 0 0 20px #ff3399;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  .heart {
+    font-size: 3rem;
+    animation: beat 1.2s infinite;
+    display: inline-block;
+  }
+  @keyframes glow {
+    from { text-shadow: 0 0 10px #ff66aa; }
+    to { text-shadow: 0 0 30px #ff3399, 0 0 40px #ff0066; }
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="box">
+    <div class="heart">💗</div>
+    <h1>Good Night Liaa Sayanggg💗</h1>
+    <p>Tidur nyenyak yaa, mimpi indah 🌙✨</p>
+  </div>
+</body>
+</html>
