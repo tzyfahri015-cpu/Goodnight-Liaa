@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Liaa 💗</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .container {
+    text-align: center;
+    z-index: 10;
+    position: relative;
+  }
+  h1 {
+    font-size: 4em;
+    color: #fecfef;
+    text-shadow: 0 0 20px #ff9a9e, 0 0 40px #fecfef;
+    animation: glow 2s ease-in-out infinite alternate;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.5em;
+    opacity: 0;
+    animation: fadeInUp 2s 1s forwards;
+  }
+  .heart, .flower {
+    position: absolute;
+    animation: fall linear infinite;
+    z-index: 1;
+  }
+  .heart { color: #ff6b9d; font-size: 20px; }
+  .flower { color: #fbbf24; font-size: 24px; }
+  
+  @keyframes glow {
+    from { text-shadow: 0 0 20px #ff9a9e, 0 0 40px #fecfef; }
+    to { text-shadow: 0 0 30px #ff9a9e, 0 0 60px #fecfef; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fall {
+    to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Good Night Liaa 💗</h1>
+  <p>Istirahat ya sayang... mimpi indah 😴✨</p>
+</div>
+
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Bikin hati dan bunga jatuh
+  function createElement(type, symbol) {
+    const el = document.createElement('div');
+    el.className = type;
+    el.innerHTML = symbol;
+    el.style.left = Math.random() * 100 + 'vw';
+    el.style.top = '-50px';
+    el.style.animationDuration = Math.random() * 5 + 5 + 's';
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 10000);
+  }
+
+  setInterval(() => {
+    createElement('heart', '💗');
+    createElement('flower', '🌸');
+  }, 300);
+</script>
+
+</body>
+</html>
